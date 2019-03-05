@@ -5,7 +5,48 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         link(rel='stylesheet',href='/stylesheets/bootstrap.min.css')
+        link(rel='stylesheet',href='/stylesheets/custom.css')
+        script(src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+        script(src = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js")
         title Document
     body
-        h1 Index
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+            a.navbar-brand(href='') Text Processor
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarColor02', aria-controls='navbarColor02', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarColor02.collapse.navbar-collapse
+
+        div(class="jumbotron textFormContainer")
+            //Input Text Form
+            .form-group
+                label.col-form-label.col-form-label-lg(for='inputLarge') Input
+                input#inputLarge.form-control.form-control-lg.textForms(type='text', placeholder='Enter text here')
             
+            //Output Text Form
+            .form-group
+                fieldset
+                    label.control-label(for='readOnlyInput') Output
+                    input#readOnlyInput.form-control.form-control-lg.textForms(type='text', placeholder='Output...', readonly='')
+        
+        //For the tabs Replace/Replace All,Capitalize,Count
+        div(class="jumbotron tabContainer")
+            h1 Tabs
+
+            ul.nav.nav-tabs
+                li.nav-item
+                    a.nav-link.active(data-toggle='tab', href='#Replace') Replace
+                li.nav-item
+                    a.nav-link(data-toggle='tab', href='#Capitalize') Capitalize
+                li.nav-item
+                    a.nav-link(data-toggle='tab', href='#Count') Count
+            #myTabContent.tab-content
+                //- #home.tab-pane.fade.active.show
+                //-     p Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+                //- #profile.tab-pane.fade
+                //-     p Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
+                #Replace.tab-pane.fade
+                    div(class="container")
+                #Capitalize.tab-pane.fade
+                    div(class="container")
+                #Count.tab-pane.fade
+                    div(class="container")
