@@ -1,0 +1,31 @@
+Design Doc:
+->Website goal:
+    ->Text/Json
+        ->Allow users to process replace/replace all words
+        ->Allow users to count words/characters
+        ->Allow users to capitalize first character in first word of all sentence.
+    ->Allows users to convert array/json string to drop down json (strecth)
+
+->Server: AWS Free Tier
+->Github:Source control
+
+Features
+->Front End
+    ->Navbar navigation
+    ->Form 
+        ->Input text to be processed
+    ->Output text form 
+        ->Gets the output
+    ->Count button 
+        ->With output text which cannot be modified only copied
+    ->Capitalize
+        ->Will output in the output text form
+    ->Allow to replace/replace all words
+        ->Will out put in the output text form
+->Backend
+    ->Render the pages 
+        ->Single page 
+            ->routing
+            ->index.html
+->Project Management
+    ->Trello
