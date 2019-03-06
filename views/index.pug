@@ -45,9 +45,23 @@ html(lang="en")
                 //-     p Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
                 //- #profile.tab-pane.fade
                 //-     p Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
-                #Replace.tab-pane.fade
+                #Replace.tab-pane.fade.show.active
                     div(class="container")
+                        span
+                            .form-group
+                                label(class = "col-form-label" for="inputDefault") Text to replace
+                                input(type = "text" class = "form-control" placeholder="Find" id = "findInput")
+                                label(class = "col-form-label" for="inputDefault") Text to replace
+                                input(type = "text" class = "form-control" placeholder="Replace" id = "replaceInput")
+                            button(class = "btn btn-outline-primary" id = "replaceBtn") Replace
+                            button(class = "btn btn-outline-primary" id = "replaceAllBtn") Replace All
                 #Capitalize.tab-pane.fade
                     div(class="container")
+                            button(class = "btn btn-outline-primary" id = "capitalizeBtn") Capitalize
                 #Count.tab-pane.fade
                     div(class="container")
+                            button(class = "btn btn-outline-primary" id = "countCharBtn") Count Character
+                            button(class = "btn btn-outline-primary" id = "countWordBtn") Count Words
+                            fieldset
+                                h5.control-label(for='readOnlyInput') Count
+                                input#readOnlyInput.form-control.textForms(type='text', placeholder='Output...', readonly='')
