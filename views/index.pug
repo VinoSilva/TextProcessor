@@ -21,13 +21,13 @@ html(lang="en")
             //Input Text Form
             .form-group
                 label.col-form-label.col-form-label-lg(for='inputLarge') Input
-                input#inputLarge.form-control.form-control-lg.textForms(type='text', placeholder='Enter text here')
+                input#inputText.form-control.form-control-lg.textForms(type='text', placeholder='Enter text here')
             
             //Output Text Form
             .form-group
                 fieldset
                     label.control-label(for='readOnlyInput') Output
-                    input#readOnlyInput.form-control.form-control-lg.textForms(type='text', placeholder='Output...', readonly='')
+                    input#outputText.form-control.form-control-lg.textForms( type='text', placeholder='Output...', readonly='')
         
         //For the tabs Replace/Replace All,Capitalize,Count
         div(class="jumbotron tabContainer")
@@ -53,15 +53,15 @@ html(lang="en")
                                 input(type = "text" class = "form-control" placeholder="Find" id = "findInput")
                                 label(class = "col-form-label" for="inputDefault") Text to replace
                                 input(type = "text" class = "form-control" placeholder="Replace" id = "replaceInput")
-                            button(class = "btn btn-outline-primary" id = "replaceBtn") Replace
-                            button(class = "btn btn-outline-primary" id = "replaceAllBtn") Replace All
+                            button(class = "btn btn-outline-primary" id = "btnReplace") Replace
+                            button(class = "btn btn-outline-primary" id = "btnReplaceAll") Replace All
                 #Capitalize.tab-pane.fade
                     div(class="container")
-                            button(class = "btn btn-outline-primary" id = "capitalizeBtn") Capitalize
+                            button(class = "btn btn-outline-primary" id = "btnCapitalize") Capitalize
                 #Count.tab-pane.fade
                     div(class="container")
-                            button(class = "btn btn-outline-primary" id = "countCharBtn") Count Character
-                            button(class = "btn btn-outline-primary" id = "countWordBtn") Count Words
+                            button(class = "btn btn-outline-primary" id = "btnCountChar") Count Character
+                            button(class = "btn btn-outline-primary" id = "btnCountWord") Count Words
                             fieldset
                                 h5.control-label(for='readOnlyInput') Count
-                                input#readOnlyInput.form-control.textForms(type='text', placeholder='Output...', readonly='')
+                                input#countOutputText.form-control.textForms(type='text', placeholder='Output...', readonly='')
